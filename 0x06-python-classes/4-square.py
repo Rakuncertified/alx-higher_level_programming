@@ -1,38 +1,34 @@
 #!/usr/bin/python3
-"""
-M0dule 4-square
-Define class Square
-"""
+"""A class that defines a Square"""
 
 
 class Square:
-    """ Defines a Class square object.
-    Private instance attribute: size.
-    """
+    """Square class."""
 
     def __init__(self, size=0):
-        """ initialize the method square object
-        """
-        if not isinstance(size, int):
+        """Square class initialized"""
+        if (isinstance(size, int) is False):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         else:
             self.__size = size
 
-    def area(self):
-        """ Method that returns the square are of the object
-        """
-        return (self.__size ** 2)
-
     @property
     def size(self):
-        """ Method that returns to the current the square area of the object
-        """
+        """Gets the data"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """ Method to set the size value of the square object
-        """
+        """Sets the data"""
+        if (isinstance(value, int) is False):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
 
+    def area(self):
+        """Return the area"""
+        return self.__size**2

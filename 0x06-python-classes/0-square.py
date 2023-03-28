@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-"""
-M0dule 0-square
-Define class Square
-"""
+"""A class for an empty square class"""
 
 
 class Square:
-    """Defines a square.
-    """
+    """Empty Square class"""
     pass
